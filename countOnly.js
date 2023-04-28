@@ -10,18 +10,15 @@ const assertEqual = (actual, expected) => {
 //itemsToCount: an object specifying what to count
 const countOnly = function (allItems, itemsToCount) {
   let result = {};
-  for (const [key, value] of Object.entries(itemsToCount)) {
-    let counter = 0;
-    if (value) {
-      for (const item of allItems) {
-        if (key === item) {
-          counter += 1;
-        }
+  for (const item of allItems) {
+    if (itemsToCount[item]) {
+      if (result[item]) {
+        result[item] += 1;
+      } else {
+        result[item] = 1;
       }
-      result[`${key}`] = counter;
     }
   }
-
   return result;
 };
 
