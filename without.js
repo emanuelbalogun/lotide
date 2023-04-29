@@ -1,11 +1,11 @@
-const assertArraysEqual = function (arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   let result = eqArrays(arr1, arr2)
     ? `✅✅✅ Assertion Passed: [ ${arr1}] === [ ${arr2} ]`
     : `🛑🛑🛑 Assertion failed: [ ${arr1}  ] !== [ ${arr2} ]`;
   console.log(result);
 };
 
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
   else {
     for (let i = 0; i < arr1.length; i++) {
@@ -17,10 +17,9 @@ const eqArrays = function (arr1, arr2) {
   }
 };
 
-const without = function (source, itemsToRemove) {
+const without = function(source, itemsToRemove) {
   let result = [];
   for (let i = 0; i < source.length; i++) {
-    
     if (!itemsToRemove.includes(source[i])) {
       result.push(source[i]);
     }
@@ -28,4 +27,6 @@ const without = function (source, itemsToRemove) {
   return result;
 };
 
-console.log(without([1,2,3],[2]));
+assertArraysEqual(without([1, 2, 3], [1, 3]), [1, 3]);
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+assertArraysEqual(without([1, 2, 3], [2]), [1, 3]);
