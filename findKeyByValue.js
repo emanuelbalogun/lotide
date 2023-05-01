@@ -6,7 +6,7 @@ const assertEqual = (actual, expected) => {
   console.log(result);
 };
 
-const findKeyByValue = function (searchedobject, searchvalue) {
+const findKeyByValue = function(searchedobject, searchvalue) {
   const keys = Object.keys(searchedobject);
 
   for (let lt of keys) {
@@ -17,11 +17,13 @@ const findKeyByValue = function (searchedobject, searchvalue) {
   return undefined;
 };
 
-const bestTVShowsByGenre = { 
+const bestTVShowsByGenre = {
   sci_fi: "The Expanse",
   comedy: "Brooklyn Nine-Nine",
   drama:  "The Wire"
 };
 
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "comedy");
 assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
+assertEqual(findKeyByValue(bestTVShowsByGenre, "Brooklyn Nine-Nine"), "drama");
