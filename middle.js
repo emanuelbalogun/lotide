@@ -1,4 +1,4 @@
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) return false;
   else {
     for (let i = 0; i < arr1.length; i++) {
@@ -10,21 +10,20 @@ const eqArrays = function (arr1, arr2) {
   }
 };
 
-const assertArraysEqual = function (arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   let result = eqArrays(arr1, arr2)
     ? `✅✅✅ Assertion Passed: [ ${arr1}] === [ ${arr2} ]`
     : `🛑🛑🛑 Assertion failed: [ ${arr1}  ] !== [ ${arr2} ]`;
   console.log(result);
 };
 
-const middle = function (arr1) {
+const middle = function(arr1) {
   let result = [];
   if (arr1.length <= 2) return result;
   const index = Math.floor(arr1.length / 2);
 
   if (arr1.length % 2 === 0) {
-    console.log("i am even");
-    result = arr1.slice(index, index + 2);
+    result = arr1.slice(index - 1, index + 1);
   } else {
     result = arr1.slice(index, index + 1);
   }
@@ -32,3 +31,8 @@ const middle = function (arr1) {
 };
 
 console.log(middle([1, 2, 3, 4, 5, 6, 7]));
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [4]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6,7,8]), [4,5]);
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6,7,8,9]), [5]);
+
