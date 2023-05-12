@@ -1,12 +1,4 @@
-const assertEqual = (actual, expected) => {
-  let result =
-    actual === expected
-      ? `✅✅✅ Assertion Passed: [ ${actual}] === [ ${expected} ]`
-      : `🛑🛑🛑 Assertion failed: [ ${actual}  ] !== [ ${expected} ]`;
-  console.log(result);
-};
-
-const countLetters = function (arrg) {
+const countLetters = function(arrg) {
   let result = {};
   for (const itm of arrg) {
     if (itm === " ") continue;
