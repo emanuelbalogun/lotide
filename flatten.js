@@ -1,6 +1,6 @@
 //const assertArraysEqual = require('./assertArraysEqual');
 
-const flatten = function (arr1) {
+const flatten = function(arr1) {
   let result = [];
   if (Array.isArray(arr1)) {
     for (let i = 0; i < arr1.length; i++) {
