@@ -1,14 +1,4 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) return false;
-  else {
-    for (let i = 0; i < arr1.length; i++) {
-      if (arr1[i] !== arr2[i]) {
-        return false;
-      }
-    }
-    return true;
-  }
-};
+const eqArrays = require('./eqArrays');
 
 const eqObjects = function(actual, expected) {
   if (Object.keys(actual).length !== Object.keys(expected).length) {
@@ -19,11 +9,6 @@ const eqObjects = function(actual, expected) {
     if (expected[key] !== value) {
       if (Array.isArray(expected[key]) && eqArrays(expected[key], value)) {
         return true;
-      } else if (
-        Array.isArray(expected[key]) &&
-        !eqArrays(expected[key], value)
-      ) {
-        return false;
       } else {
         return false;
       }
