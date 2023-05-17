@@ -29,7 +29,7 @@ The following functions are currently implemented:
 * `flatten(arr)`: flatten arrays to 1-dimension e.g _flatten(["1",["2","3"]]) =>["1,"2","3"]
 * `takeUntil(arr,callback)`: returns the element of the array until the call back function is satisfied
 * `head(arr)`: Returns the head of the array i.e the first elemnt of the array
-* `letterPosition(sentence)`: Returns the postions of a letter in a sentence
+* `letterPositions(sentence)`: Returns the postions of a letter in a sentence
 * `map(array, callback)` : Returns arrays that satisfy the callback function
 * `middle(arr)` : Return as the middle of the array as another array
 * `without(sourcearray,itemToRemove) `: Return sourcearray without the the itemToRemove
@@ -39,3 +39,4 @@ The following functions are currently implemented:
 * `countLetters(arg) ` : Return the count of each distinct letter in the arg
 * `eqObjects(obj1,obj2) ` : Return boolean after comparing the equality of two objects 
 * `eqArray(arr1, arr2) ` : Return boolean after comparing the equality of two arrays
+* `countOnly(allItems, itemsToCount)` : Returns the number of itemTocount in allItems
