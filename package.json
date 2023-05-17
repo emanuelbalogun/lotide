@@ -2,7 +2,7 @@
   "name": "@emanuelbalogun/lotide",
   "version": "1.0.0",
   "description": "A set of functions as developer tools while coding",
-  "main": "assertArraysEqual.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
