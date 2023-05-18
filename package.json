@@ -1,6 +1,6 @@
 {
   "name": "@emanuelbalogun/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A set of functions as developer tools while coding",
   "main": "index.js",
   "directories": {
