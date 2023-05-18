@@ -47,3 +47,4 @@ const longSleeveMultiColorShirtObject = {
   sleeveLength: "long",
 };
 console.log(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject));
+module.exports = eqObjects;
