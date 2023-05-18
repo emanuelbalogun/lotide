@@ -11,7 +11,7 @@ const takeUntil = require("./takeUntil");
 const eqArrays = require("./eqArrays");
 const countLetter = require("./countLetters");
 const countOnly = require("./countOnly");
-const eqObject = require("eqObject");
+const eqObject = require("./eqObjects");
 
 module.exports = {
   head,
